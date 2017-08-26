@@ -9,8 +9,13 @@ This is the management account for all interns which tracks their KPIs and can b
 1. Clone or download from `https://github.com/Eldohub/internship-portal-laravel` 
 2. From your installation folder, run;
 ```bash
-composer install
+$ composer install
 ```
+
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
 
 
