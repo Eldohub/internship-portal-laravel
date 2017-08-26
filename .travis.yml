@@ -13,3 +13,10 @@ before_script:
 
 script:
   - vendor/bin/phpunit
+
+notifications:
+  # slack:
+  #   on_success: never
+  #   on_fail: always
+  email:
+    - jomwashighadi@gmail.com
