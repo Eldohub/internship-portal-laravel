@@ -4,8 +4,51 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "96098e473b028cdb2529580554a1ae3e",
+    "content-hash": "b4b0a47660180ac2596bafef07ae91cd",
     "packages": [
+        {
+            "name": "dena-a/laravel-elastic-email",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dena-a/laravel-elastic-email.git",
+                "reference": "075c16b6bb3483b2d913b9ae1cdacf91d630413a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dena-a/laravel-elastic-email/zipball/075c16b6bb3483b2d913b9ae1cdacf91d630413a",
+                "reference": "075c16b6bb3483b2d913b9ae1cdacf91d630413a",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "5.4.x"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Dena\\LaravelElasticEmail\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dena Ajdari",
+                    "email": "dena.ajdari@gmail.com"
+                }
+            ],
+            "description": "Wrapper for Elastic Email HTTP api to send mails using laravel",
+            "homepage": "https://github.com/dena-a/laravel-elastic-email",
+            "keywords": [
+                "elastic",
+                "elasticemail",
+                "email",
+                "laravel"
+            ],
+            "time": "2017-02-25T19:42:26+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",

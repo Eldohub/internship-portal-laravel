@@ -35,4 +35,9 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'elastic_email' => [
+        'key' => env('ELASTIC_KEY'),
+        'account' => env('ELASTIC_ACCOUNT')
+    ],
+
 ];
