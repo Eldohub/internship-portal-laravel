@@ -11,7 +11,9 @@
     <title>{{ config('app.name') }}</title>
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/semantic.min.css') }}">
+
 </head>
 <body>
     <div id="app">
@@ -75,6 +77,7 @@
     </div>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+    <!-- <script src="{{ asset('js/app.js') }}"></script> -->
+    <script src="{{ asset('js/semantic.min.js') }}"></script>
 </body>
 </html>
