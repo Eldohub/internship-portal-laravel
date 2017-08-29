@@ -17,5 +17,8 @@
     "laravel-mix": "^1.0",
     "lodash": "^4.17.4",
     "vue": "^2.1.10"
+  },
+  "dependencies": {
+    "semantic-ui": "^2.2.13"
   }
 }
