@@ -8,11 +8,15 @@
         "php": ">=5.6.4",
         "dena-a/laravel-elastic-email": "^1.1",
         "laravel/framework": "5.4.*",
-        "laravel/tinker": "~1.0"
+        "laravel/tinker": "~1.0",
+        "nesbot/carbon": "^1.22",
+        "ramsey/uuid": "^3.7",
+        "spatie/laravel-permission": "^2.4"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
+        "barryvdh/laravel-debugbar": "^2.1",
         "phpunit/phpunit": "~5.7"
     },
     "autoload": {

@@ -1,5 +1,5 @@
 {
-  "base": "yes",
+  "base": "semantic/",
   "paths": {
     "source": {
       "config": "src/theme.config",
@@ -15,8 +15,9 @@
     },
     "clean": "dist/"
   },
-  "permission": false,
+  "permission": 744,
   "autoInstall": false,
-  "rtl": false,
-  "version": "2.2.13"
+  "rtl": "both",
+  "version": "2.2.13",
+  "components": []
 }

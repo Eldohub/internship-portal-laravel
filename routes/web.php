@@ -41,4 +41,14 @@ Route::group(['prefix'=>'user'], function () {
 
 });
 
+/**
+* @ Admin route
+*/
 
+Route::group(['prefix'=>'admin', 'namespace' => 'Admin', 'as'=>'admin.'], function(){
+
+	// Darshboad
+	Route::get('/dashboard', [
+		'uses' => 'AdminController@index'
+		])->name('dashboard');
+});

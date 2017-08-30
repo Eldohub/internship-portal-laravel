@@ -1,4 +1,23 @@
 let mix = require('laravel-mix');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+
+// paths to clean
+var pathsToClean = [
+    'public/assets/app/js',
+    'public/assets/app/css',
+    'public/assets/admin/js',
+    'public/assets/admin/css',
+];
+
+// the clean options to use
+var cleanOptions = {};
+
+mix.webpackConfig({
+    plugins: [
+        new CleanWebpackPlugin(pathsToClean, cleanOptions)
+    ]
+});
+
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management

@@ -127,7 +127,7 @@
               </div>
             @else
             <div class="ui dropdown item">
-              {{ Auth::user()->full_name }} <i class="dropdown icon"></i>
+              {{ Auth::user()->email }} <i class="dropdown icon"></i>
               <div class="menu">
                 <a class="item button">My Profile</a>
                 <a class="item" href="{{ route('logout') }}"

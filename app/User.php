@@ -4,10 +4,11 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable, HasRoles;
 
     /**
      * The attributes that are mass assignable.
@@ -15,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','full_name', 'course', 'school', 'year', 'motivation', 'expectations', 'avatar', 'id_no', 'is_admin',
+        'name', 'email', 'password','full_name', 'course', 'school', 'year', 'motivation', 'expectations', 'avatar', 'id_no', 'is_admin','confirmation_code', 'confirmed',
     ];
 
     /**
@@ -24,10 +25,34 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password', 'remember_token', 'confirmation_code',
     ];
 
-    //Reports belonging to a user
+    /**
+     * Use the the web guard for spatie
+     *
+     * @var string
+     */
+    protected $guard_name = 'web';
+
+
+    /**
+     * Away mutate the passworsd attr
+     *
+     * @param string $value
+     * @return void
+     */
+    public function setPasswordAttribute(string $value)
+    {
+        $this->attributes['password'] = bcrypt($value);
+    }
+
+    /**
+     * Reports belonging to a user
+     *
+     * @param null
+     * @return App\Report;
+     */
     public function reports()
     {
         return $this->hasMany('App\Report');
