@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','full_name', 'course', 'school', 'year', 'motivation', 'expectations', 'avatar', 'id_no', 'is_admin',
     ];
 
     /**
@@ -26,4 +26,10 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    //Reports belonging to a user
+    public function reports()
+    {
+        return $this->hasMany('App\Report');
+    }
 }
