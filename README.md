@@ -33,12 +33,12 @@ $ npm install
 $ npm run dev
 ```
 
-The above commands installs php dependency packages plus Node packages. 
+The above commands installs php dependency packages + Node packages. 
 `npm run dev` compiles the `semantic-ui` **.js** and **.css** files
 
 ## Collaboration
 
-Collaboration guidelines are laid out on our [Contribution Guide](CONTRIBUTING.md). Also refer to our [Code of Conduct](CODE_OF_CONDUCT.md) to see our accepted behaviour.
+Participation guidelines are laid out on our [Contribution Guide](CONTRIBUTING.md). Also please refer to our [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## License
 
