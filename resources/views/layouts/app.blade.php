@@ -115,7 +115,7 @@
             </div>
             <a class="active item" href="{{ url('/') }}">{{ config('app.name') }}</a>
             <a class="item">Our Work</a>
-            <a class="item">Active Interns</a>
+            <a class="item" href="{{route('interns')}}">Active Interns</a>
             <div class="right menu">
            
             @if (Auth::guest())                        
@@ -127,7 +127,7 @@
               </div>
             @else
             <div class="ui dropdown item">
-              {{ Auth::user()->full_name }} <i class="dropdown icon"></i>
+              {{ Auth::user()->email }} <i class="dropdown icon"></i>
               <div class="menu">
                 <a class="item button">My Profile</a>
                 <a class="item" href="{{ route('logout') }}"
@@ -154,7 +154,7 @@
           </div>
           <a class="active item" href="{{ url('/') }}">{{ config('app.name') }}</a>
           <a class="item">Our Work</a>
-          <a class="item">Active Interns</a>
+          <a class="item" href="{{route('interns')}}">Active Interns</a>
           @if (Auth::guest()) 
           <a class="item">Login</a>
           <a class="item">Apply for internship</a>
