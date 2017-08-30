@@ -18,3 +18,16 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+/**
+* @ Admin route
+*/
+
+Route::group(['prefix'=>'admin', 'namespace' => 'Admin', 'as'=>'admin.'], function(){
+
+	// Darshboad
+	Route::get('/dashboard', [
+		'uses' => 'AdminController@index'
+		])->name('dashboard');
+});
