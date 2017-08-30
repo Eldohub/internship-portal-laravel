@@ -31,6 +31,12 @@ $ composer install
 $ npm install
 
 $ npm run dev
+
+$ php artisan migrate --seed
+
+or
+
+$ php artisan migrate:refresh --seed
 ```
 
 The above commands installs php dependency packages + Node packages. 
