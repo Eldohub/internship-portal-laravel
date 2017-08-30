@@ -7,5 +7,10 @@ use App\User;
 
 trait UserRelations
 {
-    
+    /**
+    * 
+    *
+    * @param 
+    * @return 
+    */
 }
