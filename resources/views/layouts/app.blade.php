@@ -104,7 +104,7 @@
 <body>
     <div id="app">
 
-        <!-- Following Menu -->
+        <!-- Main Menu -->
         <div class="ui large top fixed menu masthead">
           <div class="ui container">
             <a class="toc item">
@@ -123,7 +123,7 @@
                 <a class="ui button" href="{{ route('login') }}">Log in</a>
               </div>
               <div class="item">
-                <a class="ui primary button" href="{{ route('register') }}">Request Account</a>
+                <a class="ui primary button" href="{{ route('register') }}">Apply for internship</a>
               </div>
             @else
             <div class="ui dropdown item">
@@ -157,7 +157,7 @@
           <a class="item">Active Interns</a>
           @if (Auth::guest()) 
           <a class="item">Login</a>
-          <a class="item">Request Account</a>
+          <a class="item">Apply for internship</a>
           @else
           <a class="item button">My Profile</a>
           <a class="item" href="{{ route('logout') }}"
