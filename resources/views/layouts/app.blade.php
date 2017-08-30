@@ -15,7 +15,6 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/semantic.min.css') }}">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/components/icon.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/components/transition.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/components/sticky.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/components/sidebar.min.css">
     <style type="text/css" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/components/dropdown.min.css"></style>
     <style type="text/css">
@@ -76,19 +75,16 @@
           padding: 5em 0em;
         }
 
-        .secondary.pointing.menu .toc.item {
+        .fixed.masthead.menu .toc.item {
           display: none;
         }
 
         @media only screen and (max-width: 700px) {
-          .ui.fixed.menu {
-            display: none !important;
-          }
-          .secondary.pointing.menu .item,
-          .secondary.pointing.menu .menu {
+          .fixed.masthead.menu .item,
+          .fixed.masthead.menu .menu {
             display: none;
           }
-          .secondary.pointing.menu .toc.item {
+          .fixed.masthead.menu .toc.item {
             display: block;
           }
           .masthead.segment {
@@ -108,7 +104,72 @@
 <body>
     <div id="app">
 
-    @include('main-menu.menu')
+        <!-- Following Menu -->
+        <div class="ui large top fixed menu masthead">
+          <div class="ui container">
+            <a class="toc item">
+              <i class="sidebar icon"></i>
+            </a>
+            <div class="item">
+                <img src={{asset("/images/logo.png")}}>
+            </div>
+            <a class="active item" href="{{ url('/') }}">{{ config('app.name') }}</a>
+            <a class="item">Our Work</a>
+            <a class="item">Active Interns</a>
+            <div class="right menu">
+           
+            @if (Auth::guest())                        
+              <div class="item">
+                <a class="ui button" href="{{ route('login') }}">Log in</a>
+              </div>
+              <div class="item">
+                <a class="ui primary button" href="{{ route('register') }}">Request Account</a>
+              </div>
+            @else
+            <div class="ui dropdown item">
+              {{ Auth::user()->full_name }} <i class="dropdown icon"></i>
+              <div class="menu">
+                <a class="item button">My Profile</a>
+                <a class="item" href="{{ route('logout') }}"
+                    onclick="event.preventDefault();
+                             document.getElementById('logout-form').submit();">
+                    Logout
+                </a>
+
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    {{ csrf_field() }}
+                </form>
+              </div>
+            </div>
+            @endif
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Sidebar Menu -->
+        <div class="ui vertical inverted sidebar menu">
+          <div class="item">
+             <img class="ui mini image" src={{asset("/images/logo.png")}}>
+          </div>
+          <a class="active item" href="{{ url('/') }}">{{ config('app.name') }}</a>
+          <a class="item">Our Work</a>
+          <a class="item">Active Interns</a>
+          @if (Auth::guest()) 
+          <a class="item">Login</a>
+          <a class="item">Request Account</a>
+          @else
+          <a class="item button">My Profile</a>
+          <a class="item" href="{{ route('logout') }}"
+            onclick="event.preventDefault();
+                     document.getElementById('logout-form').submit();">
+            Logout
+          </a>
+          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            {{ csrf_field() }}
+          </form>
+          @endif
+        </div>
 
     @yield('content')
     
@@ -120,27 +181,12 @@
 <!-- <script src="{{ asset('js/app.js') }}"></script> -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="{{ asset('js/semantic.min.js') }}"></script>
-<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.10/components/transition.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.10/components/transition.min.js"></script> -->
 <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.10/components/sidebar.min.js"></script>
 <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.10/components/visibility.min.js"></script>
-<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.10/components/sticky.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/semantic-ui/2.2.10/components/dropdown.min.js"></script>
 <script>
   $(document).ready(function() {
-
-      // fix menu when passed
-      $('.masthead').visibility({
-          once: false,
-          onBottomPassed: function() {
-            $('.fixed.menu').transition('fade in');
-          },
-          onBottomPassedReverse: function() {
-            $('.fixed.menu').transition('fade out');
-          }
-        });
-       //Checks on refresh
-       $('.masthead').visibility('refresh');
-
       // create sidebar and attach to menu open
       $('.ui.sidebar').sidebar('attach events', '.toc.item');
 
