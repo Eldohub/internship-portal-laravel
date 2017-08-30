@@ -7,12 +7,33 @@ This is the management account for all interns which tracks their KPIs and can b
 
 ## Installation
 
+**Pre-installation info**
+The Laravel framework requires:
+
+- PHP >= 5.4
+- MCrypt PHP Extension
+- OpenSSL PHP Extension
+- PDO PHP Extension
+- Mbstring PHP Extension
+- Tokenizer PHP Extension
+- XML PHP Extension
+
+As of PHP 5.5, some OS distributions may require you to manually install the PHP JSON extension. When using Ubuntu, this can be done via `apt-get install php5-json`.
+
+
 1. Clone or download from `https://github.com/Eldohub/internship-portal-laravel` 
+
 2. From your installation folder, run;
 ```bash
 $ composer install
+
+$ npm install
+
+$ npm run dev
 ```
 
+The above commands installs php dependency packages plus Node packages. 
+`npm run dev` compiles the `semantic-ui` **.js** and **.css** files
 
 ## License
 
