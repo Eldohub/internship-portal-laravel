@@ -36,6 +36,10 @@ $ npm run dev
 The above commands installs php dependency packages plus Node packages. 
 `npm run dev` compiles the `semantic-ui` **.js** and **.css** files
 
+## Collaboration
+
+Collaboration guidelines are laid out on our [Contribution Guide](CONTRIBUTING.md). Also refer to our [Code of Conduct](CODE_OF_CONDUCT.md) to see our accepted behaviour.
+
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
