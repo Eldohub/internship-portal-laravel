@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'confirmation_code', 'confirmed',
+        'name', 'email', 'password','full_name', 'course', 'school', 'year', 'motivation', 'expectations', 'avatar', 'id_no', 'is_admin','confirmation_code', 'confirmed',
     ];
 
     /**
@@ -48,8 +48,13 @@ class User extends Authenticatable
     }
 
     /**
+     * Reports belonging to a user
      *
-     *
-     *
+     * @param null
+     * @return App\Report;
      */
+    public function reports()
+    {
+        return $this->hasMany('App\Report');
+    }
 }
