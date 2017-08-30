@@ -8,6 +8,7 @@ This is the management account for all interns which tracks their KPIs and can b
 ## Installation
 
 **Pre-installation info**
+
 The Laravel framework requires:
 
 - PHP >= 5.4
