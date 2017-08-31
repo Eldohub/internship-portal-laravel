@@ -30,7 +30,7 @@
       </div>
       <div class="row">
         <div class="center aligned column">
-          <a class="ui huge button">Check Out Some of Our Work <i class="down arrow icon"></i></a>
+          <a class="ui huge button">Check Out Some of Our Work <i class="angle down icon"></i></a>
         </div>
       </div>
     </div>

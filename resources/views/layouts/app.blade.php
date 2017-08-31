@@ -145,7 +145,7 @@
             <div class="ui dropdown item">
               {{ Auth::user()->email }} <i class="dropdown icon"></i>
               <div class="menu">
-                <a class="item button">My Profile</a>
+                <a class="item button" href="{{ route('home') }}">My Profile</a>
                 <a class="item" href="{{ route('logout') }}"
                     onclick="event.preventDefault();
                              document.getElementById('logout-form').submit();">
