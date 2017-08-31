@@ -18,6 +18,22 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/components/sidebar.min.css">
     <style type="text/css" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/components/dropdown.min.css"></style>
     <style type="text/css">
+
+        /**
+        * Semantic UI template Resets / Customizations
+        **/
+
+        .ui.inverted.segment, .ui.primary.inverted.segment{
+          background: #594b41 !important;
+        }
+        .ui.primary.button, .ui.primary.buttons .button{
+          background-color: #8dc440;
+        }
+
+
+        /**
+        * Menu and Sidebar Stylings
+        **/
         .hidden.menu {
           display: none;
         }
@@ -115,7 +131,7 @@
             </div>
             <a class="active item" href="{{ url('/') }}">{{ config('app.name') }}</a>
             <a class="item">Our Work</a>
-            <a class="item" href="{{route('interns')}}">Active Interns</a>
+            <a class="item" href="{{route('interns')}}">Our Network</a>
             <div class="right menu">
            
             @if (Auth::guest())                        
@@ -154,7 +170,7 @@
           </div>
           <a class="active item" href="{{ url('/') }}">{{ config('app.name') }}</a>
           <a class="item">Our Work</a>
-          <a class="item" href="{{route('interns')}}">Active Interns</a>
+          <a class="item" href="{{route('interns')}}">Our Network</a>
           @if (Auth::guest()) 
           <a class="item">Login</a>
           <a class="item">Apply for internship</a>
