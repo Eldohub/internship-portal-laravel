@@ -18,11 +18,28 @@ class UserController extends Controller
 
      /**
      * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
      */
     public function index()
     {
         return view('user.account');
+    }
+
+
+    // Show the entry form
+    public function entry()
+    {
+        return view('user.entry');
+    }
+
+    // Show the milestones
+    public function milestones()
+    {
+        return view('user.milestones');
+    }
+
+    // Show the graph
+    public function graph()
+    {
+        return view('user.graph');
     }
 }
