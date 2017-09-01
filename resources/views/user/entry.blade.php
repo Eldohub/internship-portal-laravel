@@ -1,7 +1,7 @@
  @extends('user.account')
 
 @section('account.content')
- <form class="ui large form" method="POST" action="{{ route('login') }}">
+ <form class="ui large form" method="POST" action="{{ route('post-entry') }}">
     {{ csrf_field() }}
 <div class="field">
 	<label>Accomplished </label>

@@ -2,7 +2,10 @@
 
 @section('content')
 <div class="ui container">
-<div class="ui large compact menu" style="margin-top: 10em; margin-bottom: 5em;">
+
+<h1 class="ui header" style="margin-top: 5em; margin-bottom: 2em;">
+<span class="ui left">{{date("l jS, F Y") }}</span> &nbsp;
+<div class="ui large compact menu" style="float: right">
   <a class="active item" href="{{route('entry')}}">
 	  <i class="browser icon"></i>
 	  Today Entry
@@ -16,6 +19,11 @@
   	Graph
   </a>
 </div>
+</h1>
+
+
+
+
 @yield('account.content')
 </div>
 @endsection

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Validator;
 
 class UserController extends Controller
 {
@@ -24,11 +26,30 @@ class UserController extends Controller
         return view('user.account');
     }
 
+    // Complete account setup
+    public function complete()
+    {
+        return view('user.complete_profile');
+    }
 
     // Show the entry form
     public function entry()
     {
         return view('user.entry');
+    }
+
+    // Processes the received data
+    public function postEntry(Request $request)
+    {
+        // mass save all input
+        if (Report::create($request->all())) {
+            Session::flash("success","Todays task entry successful!");
+        }
+        else
+        {
+          Session::flash("info","There was an error and the entry could not be saved at moment. Please try again!");  
+        }
+        return view('user.entry_done']);
     }
 
     // Show the milestones
@@ -42,4 +63,5 @@ class UserController extends Controller
     {
         return view('user.graph');
     }
+    
 }
