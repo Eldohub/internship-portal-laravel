@@ -1,12 +1,13 @@
  @extends('user.account')
 
 @section('account.content')
- <form class="ui large form" method="POST" action="{{ route('login') }}">
-    {{ csrf_field() }}
-<div class="field">
-	<label>Text</label>
-	<textarea></textarea>
+<div class="ui icon message">
+  <i class="notched circle loading icon"></i>
+  <div class="content">
+    <div class="header">
+      This is still work in progress...
+    </div>
+    <p>Here, you will be able to track your milestones on realtime graph.</p>
+  </div>
 </div>
-
-</form>
 @endsection

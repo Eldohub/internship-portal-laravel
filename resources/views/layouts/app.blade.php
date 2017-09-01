@@ -18,6 +18,11 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/components/sidebar.min.css">
     <style type="text/css" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/components/dropdown.min.css"></style>
     <style type="text/css">
+        html, body {
+            margin:0px;
+            padding: 0px;
+            min-height: 600px;
+        }
 
         /**
         * Semantic UI template Resets / Customizations
