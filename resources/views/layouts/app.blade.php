@@ -18,7 +18,15 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/components/sidebar.min.css">
     <style type="text/css" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/components/dropdown.min.css"></style>
     <style type="text/css">
-
+        html{
+          position:relative; 
+          min-height: 100%;
+        }
+        /*Normalize html and body elements,this style is just good to have*/
+        html,body{
+          margin:0;
+          padding:0;
+        }
         /**
         * Semantic UI template Resets / Customizations
         **/

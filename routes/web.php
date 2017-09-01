@@ -35,8 +35,13 @@ Route::group(['prefix'=>'user'], function () {
 
 		/* Main user account */
 	    Route::get('/account', 'UserController@index')->name('home');
+	    /* Complete Profile Setup*/
+	    Route::post('/account/complete', 'UserController@complete')->name('complete');
+
 	    /* Today Entry */
 	    Route::get('/entry', 'UserController@entry')->name('entry');
+	    Route::post('/entry', 'UserController@postEntry')->name('post-entry');
+
 	    /* See Milestone */
 	    Route::get('/milestones', 'UserController@milestones')->name('milestones');
 	    /* Graph */
