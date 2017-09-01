@@ -1,7 +1,7 @@
  @extends('user.account')
 
 @section('account.content')
-<div class="ui icon message">
+<div class="ui icon message large" style="margin-bottom: 5em;">
   <i class="notched circle loading icon"></i>
   <div class="content">
     <div class="header">

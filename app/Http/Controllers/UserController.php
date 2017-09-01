@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Report;
 use Auth;
+use DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
@@ -37,7 +38,17 @@ class UserController extends Controller
     // Show the entry form
     public function entry()
     {
-        return view('user.entry');
+        $daily_entry = Report::whereDate('created_at', DB::raw('CURDATE()'))->get();
+        //return appropriate view
+        if (is_null($daily_entry)) 
+        {
+            return view('user.entry');
+        }
+        else
+        {
+            return view('user.entry_done');
+        }
+        
     }
 
     // Processes the received data
@@ -45,13 +56,13 @@ class UserController extends Controller
     {
         // mass save all input
         if (Report::create($request->all())) {
-            Session::flash("success","Todays task entry successful!");
+            Session::flash("success","Todays task entry has been recorded. You can track your progress via Milestones tab.");
         }
         else
         {
-          Session::flash("info","There was an error and the entry could not be saved at moment. Please try again!");  
+          Session::flash("error","There was an error and the entry could not be saved at moment. Please try again!");  
         }
-        return view('user.entry_done');
+        return view('user.thankyou');
     }
 
     // Show the milestones

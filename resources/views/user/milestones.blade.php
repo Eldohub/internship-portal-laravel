@@ -2,7 +2,7 @@
 
 @section('account.content')
 
-<div class="ui four cards" style="margin-bottom: 5px;">
+<div class="ui four cards" style="margin-bottom: 5em;">
 @foreach($milestones as $milestone)
   <div class="card">
     <div class="content">
