@@ -17,8 +17,35 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
 
+/*
+* Guest Accessbile routes
+*/
+Route::get('/interns', 'HomeController@interns')->name('interns');
+
+
+/*
+* User Auth Routes
+*/
+
+/* These routes are under /user prefix */
+Route::group(['prefix'=>'user'], function () {
+
+	Route::group(['middleware' => 'auth'], function () {
+
+		/* Main user account */
+	    Route::get('/account', 'UserController@index')->name('home');
+	    /* Today Entry */
+	    Route::get('/entry', 'UserController@entry')->name('entry');
+	    /* See Milestone */
+	    Route::get('/milestones', 'UserController@milestones')->name('milestones');
+	    /* Graph */
+	    Route::get('/graph', 'UserController@graph')->name('graph');
+	   
+	    
+	});
+
+});
 
 /**
 * @ Admin route
