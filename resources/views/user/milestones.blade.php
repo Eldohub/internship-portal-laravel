@@ -1,12 +1,20 @@
  @extends('user.account')
 
 @section('account.content')
- <form class="ui large form" method="POST" action="{{ route('login') }}">
-    {{ csrf_field() }}
-<div class="field">
-	<label>Text</label>
-	<textarea></textarea>
+
+<div class="ui four cards" style="margin-bottom: 5px;">
+@foreach($milestones as $milestone)
+  <div class="card">
+    <div class="content">
+      <div class="header">{{date("l jS F", strtotime($milestone->created_at))}}</div>
+      <div class="meta">Day {{$loop->iteration}}</div>
+      <div class="description">
+        {{ $milestone->accomplished }}
+      </div>
+    </div>
+  </div>
+@endforeach
 </div>
 
-</form>
+
 @endsection

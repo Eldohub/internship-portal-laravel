@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Report;
+use Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
@@ -56,7 +57,8 @@ class UserController extends Controller
     // Show the milestones
     public function milestones()
     {
-        return view('user.milestones');
+        $milestones = Report::where('user_id', Auth::user()->id)->get();
+        return view('user.milestones')->with(['milestones'=>$milestones]);
     }
 
     // Show the graph
