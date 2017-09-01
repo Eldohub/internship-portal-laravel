@@ -38,9 +38,9 @@ class UserController extends Controller
     // Show the entry form
     public function entry()
     {
-        $daily_entry = Report::whereDate('created_at', DB::raw('CURDATE()'))->get();
+        $daily_entry = Report::where('user_id', Auth::user()->id)->whereDate('created_at', DB::raw('CURDATE()'))->get();
         //return appropriate view
-        if (is_null($daily_entry)) 
+        if ($daily_entry->isEmpty()) 
         {
             return view('user.entry');
         }
