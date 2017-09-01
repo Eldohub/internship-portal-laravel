@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Report;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
@@ -49,7 +50,7 @@ class UserController extends Controller
         {
           Session::flash("info","There was an error and the entry could not be saved at moment. Please try again!");  
         }
-        return view('user.entry_done']);
+        return view('user.entry_done');
     }
 
     // Show the milestones

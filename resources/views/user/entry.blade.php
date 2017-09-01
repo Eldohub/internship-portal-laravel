@@ -5,16 +5,19 @@
     {{ csrf_field() }}
 <div class="field">
 	<label>Accomplished </label>
-	<textarea></textarea>
+	<textarea name="accomplished" alue="{{ old('accomplished') }}" required></textarea>
 </div>
 <div class="field">
 	<label>Lessons</label>
-	<textarea></textarea>
+	<textarea name="lesson" alue="{{ old('lesson') }}" required></textarea>
 </div>
 <div class="field">
 	<label>Suggestion</label>
-	<textarea></textarea>
+	<textarea name="suggestion" alue="{{ old('suggestion') }}" required></textarea>
 </div>
-
+<input type="hidden" name="user_id" value="{{Auth::user()->id}}">
+ <button type="submit" class="ui fluid large teal submit button">
+    Submit Report
+</button>
 </form>
 @endsection
