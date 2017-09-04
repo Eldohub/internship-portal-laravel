@@ -147,7 +147,7 @@
                 <a class="ui button" href="{{ route('login') }}">Log in</a>
               </div>
               <div class="item">
-                <a class="ui primary button" href="{{ route('register') }}">Apply for internship</a>
+                <a class="ui primary button" href="">Apply for internship</a>
               </div>
             @else
             <div class="ui dropdown item">
