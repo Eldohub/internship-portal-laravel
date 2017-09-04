@@ -91,7 +91,7 @@ class UserController extends Controller
     // Show the milestones
     public function milestones()
     {
-        $milestones = Report::where('user_id', Auth::user()->id)->get();
+        $milestones = Report::where('user_id', Auth::user()->id)->orderBy('created_at', 'DESC')->get();
         return view('user.milestones')->with(['milestones'=>$milestones]);
     }
 
