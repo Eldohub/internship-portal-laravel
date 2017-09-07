@@ -36,7 +36,7 @@
       <div class="ui stackable center aligned vertically padded grid">
         <div class="eight wide column">
           <h3 id="timer" class="ui header basic button" style="padding: 10px">0h 0Mins 0sec</h3>
-          <p>Use this time to grow your skills by completing tasks that will mutually achieve Eldohub objectives as it teaches you.</p>
+          <p>Use this time to grow your skills by completing tasks that will mutually achieve Eldohub objectives as you learn.</p>
           <a class="ui large right labeled primary icon button" target="_blank" href="https://trello.com/invite/b/zfXngYxJ/b4a987eac92f7dce068e9e52b523560d/eldohub-website-revamp">
             <i class="right chevron icon"></i>
             Current Task - Eldohub Trello Board
@@ -46,6 +46,7 @@
     </div>
   </div>
 </div>
+<div id="entry-section">
 <form class="ui large form" method="POST" action="{{ route('post-entry') }}" style="margin-bottom: 10px;">
     {{ csrf_field() }}
 <div class="field">
@@ -65,9 +66,14 @@
     Submit Report
 </button>
 </form>
+</div>
 
 
 <script type="text/javascript">
+
+//By Default, entry is hidden
+document.getElementById("entry-section").style.display = 'none';
+
 var today = new Date();
 
 // Schedule counting down to today 5PM
@@ -98,6 +104,7 @@ var x = setInterval(function() {
     if (distance < 0) {
         clearInterval(x);
         document.getElementById("date-section").style.display = 'none';
+        document.getElementById("entry-section").style.display = 'block';
     }
 }, 1000);
 </script>
