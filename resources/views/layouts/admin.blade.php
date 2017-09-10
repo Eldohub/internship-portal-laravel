@@ -13,14 +13,30 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet" type="text/css">
-
+    <style>
+        body{
+            background: #d9e0e7;
+        }
+    </style>
 </head>
-<body>
+<body >
     <div id="app">
-        @yield('content')
+        <v-app toolbar>
+            <toolbar></toolbar>
+            <drawer></drawer>
+            <main class="mt-5">
+                <v-container fluid class="mt-2">
+                    <router-view></router-view>
+                    <!-- @yield('content') -->
+                </v-container>
+            </main>
+        </v-app>
+        
+        <!-- <dashboard></dashboard> -->
     </div>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+
 </body>
 </html>
