@@ -52,7 +52,5 @@ Route::group(['prefix'=>'admin', 'namespace' => 'Admin', 'as'=>'admin.'], functi
 		'uses' => 'AdminController@index'
 		])->name('dashboard');
 
-	Route::get('/example', [
-		'uses' => 'AdminController@example'
-		])->name('example');
+	Route::get('/app_auth', 'AdminController@auth');
 });

@@ -10,35 +10,35 @@ use Illuminate\Http\Request;
 */
 class AdminController extends Controller
 {
-	/**
-	* Create a new controller instance.
-    *
-    * @return void
-    */
+    /**
+     * Create a new controller instance.
+     *
+     */
 	function __construct()
 	{
 		// $this->middleware('admin');
 	}
 
-	/**
-	* @index
-	*
-	* @param Request
-	* @return \Illuminate\Http\Response
-	*/
+    /**
+     * @index
+     *
+     * @param Request $request
+     * @return \Illuminate\Http\Response
+     * @internal param $Request
+     */
 	public function index(Request $request)
 	{
 		return view('admin.dashboard');
 	}
 
 	/**
+	 * Get authenticated user
 	 *
 	 *
-	 *
-	 *
+	 * @return
 	 */
-	public function example()
+	public function auth(Request $request)
 	{
-		return view('admin.example');
+		return Auth::user();
 	}
 }
