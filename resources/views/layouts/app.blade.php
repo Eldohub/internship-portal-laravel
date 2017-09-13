@@ -18,6 +18,30 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/components/sidebar.min.css">
     <style type="text/css" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/components/dropdown.min.css"></style>
     <style type="text/css">
+        html{
+          position:relative; 
+          min-height: 100%;
+        }
+        /*Normalize html and body elements,this style is just good to have*/
+        html,body{
+          margin:0;
+          padding:0;
+        }
+        /**
+        * Semantic UI template Resets / Customizations
+        **/
+
+        .ui.inverted.segment, .ui.primary.inverted.segment{
+          background: #594b41 !important;
+        }
+        .ui.primary.button, .ui.primary.buttons .button{
+          background-color: #8dc440;
+        }
+
+
+        /**
+        * Menu and Sidebar Stylings
+        **/
         .hidden.menu {
           display: none;
         }
@@ -115,7 +139,7 @@
             </div>
             <a class="active item" href="{{ url('/') }}">{{ config('app.name') }}</a>
             <a class="item">Our Work</a>
-            <a class="item" href="{{route('interns')}}">Active Interns</a>
+            <a class="item" href="{{route('interns')}}">Our Network</a>
             <div class="right menu">
            
             @if (Auth::guest())                        
@@ -123,13 +147,13 @@
                 <a class="ui button" href="{{ route('login') }}">Log in</a>
               </div>
               <div class="item">
-                <a class="ui primary button" href="{{ route('register') }}">Apply for internship</a>
+                <a class="ui primary button" href="">Apply for internship</a>
               </div>
             @else
             <div class="ui dropdown item">
               {{ Auth::user()->email }} <i class="dropdown icon"></i>
               <div class="menu">
-                <a class="item button">My Profile</a>
+                <a class="item button" href="{{ route('home') }}">My Profile</a>
                 <a class="item" href="{{ route('logout') }}"
                     onclick="event.preventDefault();
                              document.getElementById('logout-form').submit();">
@@ -154,7 +178,7 @@
           </div>
           <a class="active item" href="{{ url('/') }}">{{ config('app.name') }}</a>
           <a class="item">Our Work</a>
-          <a class="item" href="{{route('interns')}}">Active Interns</a>
+          <a class="item" href="{{route('interns')}}">Our Network</a>
           @if (Auth::guest()) 
           <a class="item">Login</a>
           <a class="item">Apply for internship</a>
