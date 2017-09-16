@@ -7,6 +7,7 @@ var pathsToClean = [
     'public/assets/app/css',
     'public/assets/admin/js',
     'public/assets/admin/css',
+    'public/assets/admin/fonts',
 ];
 
 // the clean options to use
@@ -28,6 +29,22 @@ mix.webpackConfig({
  | file for the application as well as bundling up all the JS files.
  |
  */
+
+
+
+mix.copy([
+    'node_modules/bootstrap-material-design/dist/js/bootstrap-material-design.js',
+], 'public/assets/admin/js/mdb.js');
+
+
+mix.copy([
+    'node_modules/bootstrap-material-design/dist/css/bootstrap-material-design.css',
+], 'public/assets/admin/css/mdb.css');
+
+mix.copy([
+    'node_modules/material-icons/css/material-icons.min.css/',
+], 'public/assets/admin/fonts/');
+
 
 /*
 * Combining compiled Semantic-UI to main app files

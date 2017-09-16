@@ -1,0 +1,45 @@
+/* CUSTOM ADMIN STYLING*/
+
+
+/* Colors */
+.primary{
+
+}
+
+.success{
+
+}
+
+.danger{
+
+}
+
+.default{
+
+}
+
+.dark{
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff !important;
+}
+
+.navbar{
+    width: calc(100% - 250px);
+    margin-left: 250px;
+}
+.navbar-toggler{
+    border: none;
+    margin-bottom: 2px;
+}
+
+.navbar-toggler .mi-menu{
+    font-size: 30px;
+}
+
+.bmd-drawer-f-r{
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    display: block;
+    background: rgba(0, 0, 0, 0.8);
+}

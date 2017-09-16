@@ -13,13 +13,7 @@ require('vuetify/dist/vuetify.min.css');
 
 import Vuetify from 'vuetify'
 import VueResource from 'vue-resource'
-import router from './router'
-import { store } from './store'
 
-import Toolbar from './components/partials/Nav'
-import Drawer from './components/partials/Aside'
-import Dashboard from './components/Dashboard'
-import Login from './components/auth/Login'
 import Example from './components/Example'
 
 Vue.use(Vuetify);
@@ -32,16 +26,10 @@ Vue.use(VueResource);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('toolbar', Toolbar);
-Vue.component('drawer', Drawer);
-Vue.component('dashboard', Dashboard);
-Vue.component('login', Login);
 Vue.component('example', Example);
 
 const app = new Vue({
     el: '#app',
-    router,
-    store,
     created () {
     	console.log('created')
     }
