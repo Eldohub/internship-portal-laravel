@@ -18,9 +18,9 @@ class AdminController extends Controller
 	function __construct()
 	{
 	    if (Auth::user() && Auth::user()->hasRole('admin')){
-	        return redirect();
+	        return redirect()->intended('admin.dashboard');
         }
-        return redirect()->route('logo');
+        return redirect()->route('logout');
 	}
 
     /**

@@ -30,6 +30,7 @@ class PermissionsTableSeeder extends Seeder
         	Role::create($role);
         }
         
-        Permission::create(['name' => 'create user']); 
+        Permission::create(['name' => 'create user']);
+
     }
 }

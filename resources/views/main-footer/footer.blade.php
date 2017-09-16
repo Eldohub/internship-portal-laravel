@@ -24,6 +24,3 @@
     </div>
   </div>
 </div>
-<footer class="light text-center">
-  <p>&copy; &nbsp;{{ date('Y') }} | Made with&nbsp;<i class="mi mi-favorite" style="color: #d4105d"></i>&nbsp;by Eldo-hub Dev.</p>
-</footer>
