@@ -37,7 +37,7 @@
                 <nav class="navbar navbar-light bg-faded">
                     <button class="navbar-toggler" type="button" data-toggle="drawer" data-target="#dw-s1">
                         <span class="sr-only">Toggle drawer</span>
-                        <i class="mi mi-menu"></i>
+                        <i class="mi mi-menu light"></i>
                     </button>
                     <ul class="nav navbar-nav">
                         <li class="nav-item">
@@ -47,10 +47,13 @@
                             </button>
                         </li>
                         <li class="nav-item">
-                            <button>
+                            <button type="submit" form="logout-form">
                                 <i class="mi mi-exit-to-app"></i>
                                 <div class="ripple-container"></div>
                             </button>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                {{ csrf_field() }}
+                            </form>
                         </li>
                         <li class="nav-item">
                             <div class="dropdown">

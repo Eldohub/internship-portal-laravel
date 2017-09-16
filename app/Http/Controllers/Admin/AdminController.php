@@ -4,6 +4,7 @@ namespace  App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 /**
 * @class AdminController
@@ -16,7 +17,10 @@ class AdminController extends Controller
      */
 	function __construct()
 	{
-		// $this->middleware('admin');
+	    if (Auth::user() && Auth::user()->hasRole('admin')){
+	        return redirect();
+        }
+        return redirect()->route('logo');
 	}
 
     /**
