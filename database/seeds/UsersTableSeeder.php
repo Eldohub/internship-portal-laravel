@@ -29,6 +29,8 @@ class UsersTableSeeder extends Seeder
         // attach admin role
         $admin = User::where('email', $user->email)->first();
 
-        $admin->roles()->attach(Role::where('name', 'amdin')->first());
+        $admin->assignRole('admin');
+
+        // $admin->roles()->attach(Role::where('name', 'amdin')->first());
     }
 }

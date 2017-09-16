@@ -1,6 +1,9 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
+    "/assets/admin/js/mdb.js": "/assets/admin/js/mdb.js",
+    "/assets/admin/css/mdb.css": "/assets/admin/css/mdb.css",
+    "/assets/admin/fonts/material-icons.min.css": "/assets/admin/fonts/material-icons.min.css",
     "/css/semantic.min.css": "/css/semantic.min.css",
     "/js/semantic.min.js": "/js/semantic.min.js"
 }

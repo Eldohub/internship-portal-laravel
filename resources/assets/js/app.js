@@ -11,10 +11,13 @@ window.Vue = require('vue');
 
 require('vuetify/dist/vuetify.min.css');
 
-import Vuetify from 'vuetify';
-import App from './components/App'
+import Vuetify from 'vuetify'
+import VueResource from 'vue-resource'
+
+import Example from './components/Example'
 
 Vue.use(Vuetify);
+Vue.use(VueResource);
 
 
 /**
@@ -23,10 +26,11 @@ Vue.use(Vuetify);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example', require('./components/Example.vue'));
-// Vue.component('app', require('./components/App.vue'));
+Vue.component('example', Example);
 
 const app = new Vue({
     el: '#app',
-    render: h => h(App)
+    created () {
+    	console.log('created')
+    }
 });
