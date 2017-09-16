@@ -41,13 +41,13 @@
                     </button>
                     <ul class="nav navbar-nav">
                         <li class="nav-item">
-                            <button>
+                            <button class="btn bmd-btn-icon">
                                 <i class="mi mi-notifications"></i>
                                 <div class="ripple-container"></div>
                             </button>
                         </li>
                         <li class="nav-item">
-                            <button type="submit" form="logout-form">
+                            <button type="submit" form="logout-form" class="btn bmd-btn-icon">
                                 <i class="mi mi-exit-to-app"></i>
                                 <div class="ripple-container"></div>
                             </button>
@@ -62,8 +62,8 @@
                                     <div class="ripple-container"></div>
                                 </button>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="adminDropdownMenu">
-                                    <button class="dropdown-item">Action</button>
-                                    <button class="dropdown-item">Action</button>
+                                    <a href="/" class="dropdown-item">Home</a>
+                                    <a href="#" class="dropdown-item">Settings</a>
                                 </div>
                             </div>
                         </li>
@@ -84,9 +84,13 @@
                     <a class="list-group-item dark active" href="">
                         <i class="mi mi-home nav-icon"></i>Dashboard</a>
                     <a class="list-group-item dark" href="">
-                        <i class="mi mi-inbox nav-icon"></i>Inbox</a>
+                        <i class="mi mi-people nav-icon"></i>Members</a>
                     <a class="list-group-item dark" href="">
-                        <i class="mi mi-home nav-icon"></i>Link 3</a>
+                        <i class="mi mi-face nav-icon"></i>Interns</a>
+                    <a class="list-group-item dark" href="">
+                        <i class="mi mi-verified-user nav-icon"></i>Supervisors</a>
+                    <a class="list-group-item dark" href="">
+                        <i class="mi mi-inbox nav-icon"></i>Inbox</a>
                 </ul>
             </div>
 

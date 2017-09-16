@@ -21,7 +21,20 @@
                 <div class="card dark">
                     <a href="">
                         <div class="card-block">
-                            <i class="mi mi-group dark"></i>
+                            <i class="mi mi-people dark"></i>
+                            <div class="pull-right">
+                                <h5 class="card-title dark">Members</h5>
+                                <h4 class="dark">122</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card dark">
+                    <a href="">
+                        <div class="card-block">
+                            <i class="mi mi-face dark"></i>
                             <div class="pull-right">
                                 <h5 class="card-title dark">Interns</h5>
                                 <h4 class="dark">12</h4>
@@ -37,20 +50,7 @@
                             <i class="mi mi-verified-user dark"></i>
                             <div class="pull-right">
                                 <h5 class="card-title dark">Supervisors</h5>
-                                <h4 class="dark"></h4>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card dark">
-                    <a href="">
-                        <div class="card-block">
-                            <i class="mi mi-group dark"></i>
-                            <div class="pull-right">
-                                <h5 class="card-title dark">Requests</h5>
-                                <h4 class="dark"></h4>
+                                <h4 class="dark">11</h4>
                             </div>
                         </div>
                     </a>
@@ -63,7 +63,7 @@
                             <i class="mi mi-event-note dark"></i>
                             <div class="pull-right">
                                 <h5 class="card-title dark">Programs</h5>
-                                <h4 class="dark"></h4>
+                                <h4 class="dark">4</h4>
                             </div>
                         </div>
                     </a>
